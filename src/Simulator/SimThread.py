@@ -144,8 +144,8 @@ class SimThread(Thread):
                     if not deviceId in sampled_devices:
                         sampled_devices.append(deviceId)
                         # If new devices, sample probability even if not in run for sampling
-                        sampled_free_cpu = sampleCPU(deviceId)# - dev["usedCPU"]
-                        sampled_free_mem = sampleMEM(deviceId)# - dev["usedMEM"]
+                        sampled_free_cpu = sampleCPU(deviceId)
+                        sampled_free_mem = sampleMEM(deviceId)
                         constants.current_infrastructure[deviceId][0] = sampled_free_cpu
                         constants.current_infrastructure[deviceId][1] = sampled_free_mem
                     r = random.random()
@@ -158,8 +158,8 @@ class SimThread(Thread):
 
                     if dev["alive"]:
                         if iter_count % SAMPLE_INTERVAL == 0:
-                            sampled_free_cpu = sampleCPU(deviceId) #- dev["usedCPU"] 
-                            sampled_free_mem = sampleMEM(deviceId) #- dev["usedMEM"]
+                            sampled_free_cpu = sampleCPU(deviceId)
+                            sampled_free_mem = sampleMEM(deviceId)
                             constants.current_infrastructure[deviceId][0] = sampled_free_cpu
                             constants.current_infrastructure[deviceId][1] = sampled_free_mem
                         # adding critical CPU, MEM
