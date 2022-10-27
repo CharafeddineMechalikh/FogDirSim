@@ -7,8 +7,6 @@ profile_high = (0.9, 0.1)
 
 # Functions determining energy consumption for every device
 energy_consumption = {}
-# energy_consumption[deviceId] = (lambda cpu_usage, mem_usage: return cpu_usage, mem_usage)
-#energy_consumption["1"] = (lambda cpu_usage, mem_usage: cpu_usage+mem_usage)
 
 def large_devs(cpu_usage, mem_usage):
     if cpu_usage < 425:
@@ -31,7 +29,6 @@ for i in range(1, 6):
     energy_consumption[str(i)] = large_devs
 for i in range(6, 11):
     energy_consumption[str(i)] = medium_devs
-#energy_consumption["3"] = (lambda *args: 100)
 
 # Costo medie energia: 0,25€/kW
 
