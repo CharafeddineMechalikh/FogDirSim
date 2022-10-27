@@ -258,7 +258,6 @@ class SimThread(Thread):
                                 "severity": "critical",
                                 "type": constants.DEVICE_REACHABILITY,
                                 "message": "The device is not reachable",
-                                #"message": "The desired state of the app on this device was \"running\" but the actual state is \"stopped\"",
                                 "time": int(iter_count), # Relative
                                 "source": "Device periodic report",
                                 "action": "",
@@ -289,7 +288,6 @@ class SimThread(Thread):
                                     "severity": "critical",
                                     "type": constants.APP_HEALTH,
                                     "message": "The node on which this app is installed has critical problem with CPU resource",
-                                    #"message": "The desired state of the app on this device was \"running\" but the actual state is \"stopped\"",
                                     "time": int(iter_count), # Relative
                                     "source": "Device periodic report",
                                     "action": "",
@@ -305,7 +303,6 @@ class SimThread(Thread):
                                     "appName": myapp_details["name"],
                                     "severity": "critical",
                                     "message": "The node on which this app is installed has critical problem with Memory resource",
-                                    #"message": "The desired state of the app on this device was \"running\" but the actual state is \"stopped\"",
                                     "time": int(iter_count), # Relative
                                     "source": "Device periodic report",
                                     "action": "",
